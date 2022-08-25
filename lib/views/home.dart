@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:phyto_laafi/views/echangePage.dart';
+import 'package:phyto_laafi/views/homePage.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -9,26 +11,47 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-  int _selectedIndex = 0;
+  int _selectedIndex = 0; 
+
   PageController pageController = PageController();
+
+  final List<Widget> _screen =  <Widget>[
+    const HomePage(),
+    const EchangePage(),
+    const Center(child: Text("notification"),),
+  ];
+
+  void _onItemTap(int index){
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  void _onPageChange(int index){
+    
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title:  Container(child: const Image(image: AssetImage("assets/images/logo.png",),width: 100,)),
-      centerTitle: true,
-      leading: IconButton(onPressed: (){}, icon: const Icon(Icons.menu, color: Colors.green,)),
-      actions: [IconButton(onPressed: (){}, icon: const Icon(Icons.notifications, color: Colors.yellowAccent)), IconButton(onPressed: (){}, icon: const Icon(Icons.account_circle_rounded, color: Colors.purple,))],
-      backgroundColor: Colors.white,),
-      body: PageView(
-        controller: pageController,
-      
-      ),
-      bottomNavigationBar: BottomNavigationBar(items: const <BottomNavigationBarItem>[
-        BottomNavigationBarItem(icon:Icon(Icons.home),label: "Acceuil"),
-        BottomNavigationBarItem(icon:Icon(Icons.message),label: "Echange"),
-        BottomNavigationBarItem(icon:Icon(Icons.notifications),label: "Notification"),],
+     
+      body: Center(child: _screen.elementAt(_selectedIndex),),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon:Icon(Icons.home),
+            label: "Acceuil"
+            ),
+          BottomNavigationBarItem(
+            icon:Icon(Icons.message),
+            label: "Echange"
+            ),
+          BottomNavigationBarItem(
+            icon:Icon(Icons.notifications),
+            label: "Notification"
+            ),
+          ],
+          onTap: _onItemTap,
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.green,),
     );
