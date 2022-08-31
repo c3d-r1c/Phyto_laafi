@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:phyto_laafi/views/ajoutChamp.dart';
+import 'package:phyto_laafi/views/detailChamp.dart';
+import 'package:phyto_laafi/views/listChamp.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -60,7 +63,7 @@ class _HomePageState extends State<HomePage> {
               ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 120),
+            padding: const EdgeInsets.only(top: 140),
             child: Expanded(
               child: 
                 Padding(
@@ -72,21 +75,27 @@ class _HomePageState extends State<HomePage> {
                           crossAxisCount: 2,
                           children: [
                             // Menu Button 1
-                            Card(
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                  bottomLeft: Radius.circular(50)
+                            InkWell(
+                              child: Card(
+                                shape: const RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.only(
+                                    bottomLeft: Radius.circular(50)
+                                  ),
+                                ),
+                                elevation: 4,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset("assets/images/menu_icon_1.png", width: 120),
+                                    const SizedBox(height: 0.0,),
+                                    const Text("Mes Champ"),
+                                  ],
                                 ),
                               ),
-                              elevation: 4,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset("assets/images/menu_icon_1.png", width: 120),
-                                  const SizedBox(height: 0.0,),
-                                  const Text("Mes Champ"),
-                                ],
-                              ),
+                              onTap: () {
+                                print("mes champ");
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> ListChamp()));
+                              },
                             ),
                             // Menu Button 2
                             Card(

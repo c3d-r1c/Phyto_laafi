@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:phyto_laafi/views/home.dart';
 import 'package:phyto_laafi/widgets/button.dart';
 import 'package:phyto_laafi/config/functions.dart';
 import 'package:otp_text_field/otp_text_field.dart';
@@ -101,7 +102,25 @@ class _AuthentificationState extends State<Authentification> {
                   onTap: (() {
                     startTimer();
                   }),
-                  child: CButton(title: "Renvoyée", onPressed: () {}),
+                  child: Container(
+                decoration: ShapeDecoration(
+                    shape:
+                        RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+                    gradient:
+                        LinearGradient(colors: [Color(0xFF2aef58), Color(0xFF2ab77a)])),
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    padding:
+                        MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 115)),
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.transparent),
+                  ),
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+                  },
+                  child: const Text("Renvoyé",
+                      style: TextStyle(fontSize: 16, color: Color(0xFF2ab77a))),
+                )),
                 ),
               ]),
             ),

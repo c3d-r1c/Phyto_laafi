@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       ),
       home: SplashWidget(
         nextPage:
-            const Home(), //seenOnboard == true ? const Connexion() : const OnBoardingPage(),
+          seenOnboard == true ? const Connexion() : const OnBoardingPage(),
         child: SplashScreen(),
       ),
     );

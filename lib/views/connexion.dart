@@ -36,15 +36,25 @@ class Connexion extends StatelessWidget {
               const SizedBox(
                 height: 25,
               ),
-              CButton(
-                  title: "Connexion",
-                  onPressed: () => {
-                      print("press"),
-                       Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Authentification()))
-                      })
+              Container(
+                decoration: ShapeDecoration(
+                    shape:
+                        RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+                    gradient:
+                        LinearGradient(colors: [Color(0xFF2aef58), Color(0xFF2ab77a)])),
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    padding:
+                        MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 110)),
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.transparent),
+                  ),
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Authentification()));
+                  },
+                  child: const Text("connexion",
+                      style: TextStyle(fontSize: 16, color: Color(0xFF2ab77a))),
+                ))
             ]),
           ),
           Container(
