@@ -1,0 +1,4 @@
+#Wed Aug 31 14:39:46 GMT 2022
+base.0=/home/c3dr1c/Bureau/Phyto_laafi/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
