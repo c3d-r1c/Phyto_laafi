@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:phyto_laafi/views/connexion.dart';
+import 'package:phyto_laafi/views/diagnostisque.dart';
 import 'package:phyto_laafi/views/home.dart';
+import 'package:phyto_laafi/views/maps.dart';
 import 'package:phyto_laafi/views/splashscreen.dart';
 import './widgets/splash.dart';
 import './views/page.dart';

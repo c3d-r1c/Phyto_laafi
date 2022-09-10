@@ -115,7 +115,7 @@ class _DashboardChampState extends State<DashboardChamp> {
                         child: Container(
                           height:   30,
                           width: 80,
-                          child: Center(child: Text("Activer",style: TextStyle(color: Colors.white),)),
+                          child: const Center(child: Text("Activer",style: TextStyle(color: Colors.white),)),
                         )
                       ),
                     ],
@@ -133,11 +133,11 @@ class _DashboardChampState extends State<DashboardChamp> {
                             borderRadius:BorderRadius.circular(5),
                           ),
                          child: Padding(
-                           padding: const EdgeInsets.all(4.0),
-                           child: Center(child: Text("Desactiver",)),
+                            padding: const EdgeInsets.all(4.0),
+                            child: Center(child: Text("Desactiver",)),
                          ),
-                        height:   30,
-                          width: 80,
+                          height: 30,
+                          width:  80,
                         )
                       ),
                     ],
@@ -149,6 +149,5 @@ class _DashboardChampState extends State<DashboardChamp> {
         ],
       ),
     );
-    
   }
 }

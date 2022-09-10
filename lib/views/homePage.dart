@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:phyto_laafi/views/ajoutChamp.dart';
 import 'package:phyto_laafi/views/detailChamp.dart';
 import 'package:phyto_laafi/views/listChamp.dart';
+import 'package:phyto_laafi/views/maps.dart';
+
+import 'diagnostisque.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -115,37 +118,49 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                             // Menu Button 3
-                            Card(
-                              shape: const  RoundedRectangleBorder(
+                            InkWell(
+                              child: Card(
+                                shape: const  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(50)
+                                    ),
+                                  ),
+                                elevation: 4,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                        Image.asset("assets/images/menu_icon_5.png", width: 100,),
+                                        const SizedBox(height: 0.0,),
+                                        Text("Menances")
+                                      ],
+                                ),
+                              ),
+                              onTap: () {
+                                print("mes champ");
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> MapsSCreen()));
+                              },
+                            ),
+                            InkWell(
+                              child: Card(
+                                shape: const RoundedRectangleBorder(
                                   borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(50)
+                                    topRight: Radius.circular(50)
                                   ),
                                 ),
-                              elevation: 4,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                      Image.asset("assets/images/menu_icon_5.png", width: 100,),
-                                      const SizedBox(height: 0.0,),
-                                      Text("Menances")
-                                    ],
-                              ),
-                            ),
-                            Card(
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.only(
-                                  topRight: Radius.circular(50)
+                                elevation: 4,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset("assets/images/menu_icon_2.png", width: 100),
+                                    const SizedBox(height: 5.0,),
+                                    const Text("Diagnostique"),
+                                  ],
                                 ),
                               ),
-                              elevation: 4,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset("assets/images/menu_icon_2.png", width: 100),
-                                  const SizedBox(height: 5.0,),
-                                  const Text("Mes Champ"),
-                                ],
-                              ),
+                              onTap: () {
+                                print("mes champ");
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=> Diagnostique()));
+                              },
                             )
                           ],
                         ),
