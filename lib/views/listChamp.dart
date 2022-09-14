@@ -13,26 +13,6 @@ class ListChamp extends StatefulWidget {
 }
 
 class _ListChampState extends State<ListChamp> {
-
-  int _selectedIndex = 0; 
-
-  PageController pageController = PageController();
-
-  final List<Widget> _screen =  <Widget>[
-    const HomePage(),
-    const EchangePage(),
-    const Center(child: Text("notification"),),
-  ];
-
-  void _onItemTap(int index){
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
-  void _onPageChange(int index){
-    
-  }
   
   @override
   Widget build(BuildContext context) {
@@ -48,25 +28,6 @@ class _ListChampState extends State<ListChamp> {
           }),
            child: ChampItemWidget())
         ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon:Icon(Icons.home),
-            label: "Acceuil"
-            ),
-          BottomNavigationBarItem(
-            icon:Icon(Icons.message),
-            label: "Echange"
-            ),
-          BottomNavigationBarItem(
-            icon:Icon(Icons.notifications),
-            label: "Notification"
-            ),
-          ],
-          onTap: _onItemTap,
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.green,
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),

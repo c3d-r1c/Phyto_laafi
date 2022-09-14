@@ -36,37 +36,47 @@ class Connexion extends StatelessWidget {
               const SizedBox(
                 height: 25,
               ),
-              Container(
-                decoration: ShapeDecoration(
-                    shape:
-                        RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-                    gradient:
-                        LinearGradient(colors: [Color(0xFF2aef58), Color(0xFF2ab77a)])),
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                    padding:
-                        MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 110)),
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(Colors.transparent),
-                  ),
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Authentification()));
-                  },
-                  child: const Text("connexion",
-                      style: TextStyle(fontSize: 16, color: Color(0xFF2ab77a))),
-                ))
-            ]),
-          ),
-          Container(
-            alignment: Alignment.center,
-            height: height(context) / 3,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                image: const DecorationImage(
-                    image: AssetImage("assets/images/picto.png"))),
-          ),
-        ],
+              BoutonPers(),
+            Container(
+              alignment: Alignment.center,
+              height: height(context) / 3,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  image: const DecorationImage(
+                      image: AssetImage("assets/images/picto.png"))),
+            ),
+          ],
       ),
-    ));
+    )])));
+  }
+}
+
+class BoutonPers extends StatelessWidget {
+  const BoutonPers({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      child: Container(
+        height: 50,
+        width: 350,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5),
+          gradient: LinearGradient(colors: [
+            Color(0xFF2aef58), 
+            Color(0xFF2ab77a)
+          ])
+        ),
+        child: Center(
+          child: Text("S'indentifer",
+            style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold),),
+        ),
+      ),
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>Authentification()));
+      },
+    );
   }
 }

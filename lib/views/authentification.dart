@@ -66,7 +66,7 @@ class _AuthentificationState extends State<Authentification> {
                   height: 10,
                 ),
                 const SizedBox(
-                  height: 25,
+                  height: 20,
                 ),
                 OTPTextField(
                   length: 4,
@@ -80,7 +80,7 @@ class _AuthentificationState extends State<Authentification> {
                   },
                 ),
                 const SizedBox(
-                  height: 25,
+                  height: 20,
                 ),
                 RichText(
                   text: TextSpan(
@@ -96,31 +96,13 @@ class _AuthentificationState extends State<Authentification> {
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(
-                  height: 25,
+                  height: 18,
                 ),
                 InkWell(
                   onTap: (() {
                     startTimer();
                   }),
-                  child: Container(
-                decoration: ShapeDecoration(
-                    shape:
-                        RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
-                    gradient:
-                        LinearGradient(colors: [Color(0xFF2aef58), Color(0xFF2ab77a)])),
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                    padding:
-                        MaterialStateProperty.all(EdgeInsets.symmetric(horizontal: 115)),
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(Colors.transparent),
-                  ),
-                  onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
-                  },
-                  child: const Text("Renvoyé",
-                      style: TextStyle(fontSize: 16, color: Color(0xFF2ab77a))),
-                )),
+                  child: BoutonPers(),
                 ),
               ]),
             ),
@@ -135,6 +117,36 @@ class _AuthentificationState extends State<Authentification> {
           ],
         ),
       ),
+    );
+  }
+}
+
+class BoutonPers extends StatelessWidget {
+  const BoutonPers({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      child: Container(
+        height: 50,
+        width: 350,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5),
+          gradient: LinearGradient(colors: [
+            Color(0xFF2aef58), 
+            Color(0xFF2ab77a)
+          ])
+        ),
+        child: Center(
+          child: Text("Connexion",
+            style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold),),
+        ),
+      ),
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>Home()));
+      },
     );
   }
 }

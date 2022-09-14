@@ -148,6 +148,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
   }
 }
 
+
 class MyTextButton extends StatelessWidget {
   final String buttonName;
   final VoidCallback onPressed;
@@ -167,12 +168,14 @@ class MyTextButton extends StatelessWidget {
       child: SizedBox(
         height: 50,
         width: 400,
-        child: TextButton(
+        child: ElevatedButton(
           onPressed: onPressed,
           child: Text(
             buttonName,
             style: TextStyle(
-                color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
+                color: Colors.white, 
+                fontSize: 16, 
+                fontWeight: FontWeight.bold),
           ),
           style: TextButton.styleFrom(backgroundColor: bgColor),
         ),
@@ -200,6 +203,7 @@ class OnboardingNavBtn extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8.0),
           child: Text(name),
-        ));
+        )
+      );
   }
 }

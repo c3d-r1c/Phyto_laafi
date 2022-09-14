@@ -18,7 +18,7 @@ class _HomeState extends State<Home> {
   final List<Widget> _screen =  <Widget>[
     const HomePage(),
     const EchangePage(),
-    const Center(child: Text("notification"),),
+    const Center(child: Icon(Icons.notifications_off, color: Colors.green,)),
   ];
 
   void _onItemTap(int index){
@@ -26,11 +26,7 @@ class _HomeState extends State<Home> {
       _selectedIndex = index;
     });
   }
-
-  void _onPageChange(int index){
-    
-  }
-
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,8 +39,8 @@ class _HomeState extends State<Home> {
             label: "Acceuil"
             ),
           BottomNavigationBarItem(
-            icon:Icon(Icons.message),
-            label: "Echange"
+            icon:Icon(Icons.chrome_reader_mode_sharp),
+            label: "annuaire"
             ),
           BottomNavigationBarItem(
             icon:Icon(Icons.notifications),

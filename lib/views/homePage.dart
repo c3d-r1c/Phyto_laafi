@@ -33,22 +33,15 @@ class _HomePageState extends State<HomePage> {
           onPressed: (){}, 
           icon: const Icon(
             Icons.menu, 
-            color: Colors.green,
+            color: Colors.white,
             )
           ),
         actions: [
           IconButton(
             onPressed: (){}, 
-            icon: const Icon(
-              Icons.notifications, 
-              color: Colors.yellowAccent
-              )
-            ), 
-          IconButton(
-            onPressed: (){}, 
             icon: const Icon
               (Icons.account_circle_rounded, 
-              color: Colors.purple,
+              color: Colors.white,
               )
             )],
         backgroundColor: Colors.transparent,
@@ -64,6 +57,49 @@ class _HomePageState extends State<HomePage> {
                   image: AssetImage("assets/images/background 02.png")
                 ),
               ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 100),
+            child: Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Icon(Icons.water_drop_outlined, size: 25,color: Colors.white,),
+                        Text("Humidité", style: TextStyle(color: Colors.white),),
+                      ],
+                    ),
+                    Text(
+                      "25%", 
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 75),
+                      )
+                  ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Row(
+                      children: [
+                        Text("Ensoleignement", style: TextStyle(color: Colors.white),),
+                        Icon(Icons.sunny, size: 25,color: Colors.white,),
+                      ],
+                    ),
+                    Text(
+                      "23°", 
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 75),
+                      )
+                  ],
+                )
+              ]),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 140),
