@@ -13,44 +13,44 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->/home/c3dr1c/Bureau/Phyto_laafi/android/app/src/debug/AndroidManifest.xml:7:5-66
-15-->/home/c3dr1c/Bureau/Phyto_laafi/android/app/src/debug/AndroidManifest.xml:7:22-64
+15-->C:\Users\User\Documents\OSC_App_Mobile\Phyto_laafi\android\app\src\debug\AndroidManifest.xml:7:5-66
+15-->C:\Users\User\Documents\OSC_App_Mobile\Phyto_laafi\android\app\src\debug\AndroidManifest.xml:7:22-64
 16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-16-->/home/c3dr1c/Bureau/Phyto_laafi/android/app/src/main/AndroidManifest.xml:4:5-79
-16-->/home/c3dr1c/Bureau/Phyto_laafi/android/app/src/main/AndroidManifest.xml:4:22-77
+16-->C:\Users\User\Documents\OSC_App_Mobile\Phyto_laafi\android\app\src\main\AndroidManifest.xml:4:5-79
+16-->C:\Users\User\Documents\OSC_App_Mobile\Phyto_laafi\android\app\src\main\AndroidManifest.xml:4:22-77
 17    <uses-permission android:name="android.permission.WRITE_EXTERNAl_STORAGE" />
-17-->/home/c3dr1c/Bureau/Phyto_laafi/android/app/src/main/AndroidManifest.xml:5:5-80
-17-->/home/c3dr1c/Bureau/Phyto_laafi/android/app/src/main/AndroidManifest.xml:5:22-78
+17-->C:\Users\User\Documents\OSC_App_Mobile\Phyto_laafi\android\app\src\main\AndroidManifest.xml:5:5-80
+17-->C:\Users\User\Documents\OSC_App_Mobile\Phyto_laafi\android\app\src\main\AndroidManifest.xml:5:22-78
 18    <uses-permission android:name="android.permission.CAMERA" />
-18-->/home/c3dr1c/Bureau/Phyto_laafi/android/app/src/main/AndroidManifest.xml:6:5-64
-18-->/home/c3dr1c/Bureau/Phyto_laafi/android/app/src/main/AndroidManifest.xml:6:22-62
+18-->C:\Users\User\Documents\OSC_App_Mobile\Phyto_laafi\android\app\src\main\AndroidManifest.xml:6:5-64
+18-->C:\Users\User\Documents\OSC_App_Mobile\Phyto_laafi\android\app\src\main\AndroidManifest.xml:6:22-62
 19    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- Include required permissions for Google Maps API to run. -->
-19-->[:camera_android] /home/c3dr1c/Bureau/Phyto_laafi/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-71
-19-->[:camera_android] /home/c3dr1c/Bureau/Phyto_laafi/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-68
+19-->[:camera_android] C:\Users\User\Documents\OSC_App_Mobile\Phyto_laafi\build\camera_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-71
+19-->[:camera_android] C:\Users\User\Documents\OSC_App_Mobile\Phyto_laafi\build\camera_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-68
 20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-20-->[com.google.android.gms:play-services-maps:18.0.2] /home/c3dr1c/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:23:5-79
-20-->[com.google.android.gms:play-services-maps:18.0.2] /home/c3dr1c/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:23:22-76
+20-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\User\.gradle\caches\transforms-3\42e8e193afdde6a89d257fba9624cf99\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:23:5-79
+20-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\User\.gradle\caches\transforms-3\42e8e193afdde6a89d257fba9624cf99\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:23:22-76
 21
 22    <uses-feature
-22-->[com.google.android.gms:play-services-maps:18.0.2] /home/c3dr1c/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:26:5-28:35
+22-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\User\.gradle\caches\transforms-3\42e8e193afdde6a89d257fba9624cf99\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:26:5-28:35
 23        android:glEsVersion="0x00020000"
-23-->[com.google.android.gms:play-services-maps:18.0.2] /home/c3dr1c/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:27:9-41
+23-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\User\.gradle\caches\transforms-3\42e8e193afdde6a89d257fba9624cf99\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:27:9-41
 24        android:required="true" />
-24-->[com.google.android.gms:play-services-maps:18.0.2] /home/c3dr1c/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:28:9-32
+24-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\User\.gradle\caches\transforms-3\42e8e193afdde6a89d257fba9624cf99\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:28:9-32
 25
 26    <queries>
-26-->[com.google.android.gms:play-services-maps:18.0.2] /home/c3dr1c/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:30:5-34:15
+26-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\User\.gradle\caches\transforms-3\42e8e193afdde6a89d257fba9624cf99\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:30:5-34:15
 27
 28        <!-- Needs to be explicitly declared on Android R+ -->
 29        <package android:name="com.google.android.apps.maps" />
-29-->[com.google.android.gms:play-services-maps:18.0.2] /home/c3dr1c/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:9-64
-29-->[com.google.android.gms:play-services-maps:18.0.2] /home/c3dr1c/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:18-61
+29-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\User\.gradle\caches\transforms-3\42e8e193afdde6a89d257fba9624cf99\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:33:9-64
+29-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\User\.gradle\caches\transforms-3\42e8e193afdde6a89d257fba9624cf99\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:33:18-61
 30    </queries>
 31
 32    <application
 33        android:name="android.app.Application"
 34        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-34-->[androidx.core:core:1.6.0] /home/c3dr1c/.gradle/caches/transforms-3/acbce933e4b464a5224ed377a62db1f5/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+34-->[androidx.core:core:1.6.0] C:\Users\User\.gradle\caches\transforms-3\acbce933e4b464a5224ed377a62db1f5\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
 35        android:debuggable="true"
 36        android:icon="@mipmap/ic_launcher"
 37        android:label="Phyto laafi" >
@@ -91,39 +91,39 @@
 72            android:value="AIzaSyASsqN49_LVi1v0MtoUi3vBywWqsptDWoI" />
 73
 74        <uses-library
-74-->[androidx.window:window:1.0.0-beta04] /home/c3dr1c/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+74-->[androidx.window:window:1.0.0-beta04] C:\Users\User\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
 75            android:name="androidx.window.extensions"
-75-->[androidx.window:window:1.0.0-beta04] /home/c3dr1c/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+75-->[androidx.window:window:1.0.0-beta04] C:\Users\User\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
 76            android:required="false" />
-76-->[androidx.window:window:1.0.0-beta04] /home/c3dr1c/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+76-->[androidx.window:window:1.0.0-beta04] C:\Users\User\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
 77        <uses-library
-77-->[androidx.window:window:1.0.0-beta04] /home/c3dr1c/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+77-->[androidx.window:window:1.0.0-beta04] C:\Users\User\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
 78            android:name="androidx.window.sidecar"
-78-->[androidx.window:window:1.0.0-beta04] /home/c3dr1c/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+78-->[androidx.window:window:1.0.0-beta04] C:\Users\User\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
 79            android:required="false" /> <!-- Needs to be explicitly declared on P+ -->
-79-->[androidx.window:window:1.0.0-beta04] /home/c3dr1c/.gradle/caches/transforms-3/49bc944d29f70d45aa5add8e43e3247e/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+79-->[androidx.window:window:1.0.0-beta04] C:\Users\User\.gradle\caches\transforms-3\49bc944d29f70d45aa5add8e43e3247e\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
 80        <uses-library
-80-->[com.google.android.gms:play-services-maps:18.0.2] /home/c3dr1c/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:39:9-41:40
+80-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\User\.gradle\caches\transforms-3\42e8e193afdde6a89d257fba9624cf99\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:39:9-41:40
 81            android:name="org.apache.http.legacy"
-81-->[com.google.android.gms:play-services-maps:18.0.2] /home/c3dr1c/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:40:13-50
+81-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\User\.gradle\caches\transforms-3\42e8e193afdde6a89d257fba9624cf99\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:40:13-50
 82            android:required="false" />
-82-->[com.google.android.gms:play-services-maps:18.0.2] /home/c3dr1c/.gradle/caches/transforms-3/42e8e193afdde6a89d257fba9624cf99/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:41:13-37
+82-->[com.google.android.gms:play-services-maps:18.0.2] C:\Users\User\.gradle\caches\transforms-3\42e8e193afdde6a89d257fba9624cf99\transformed\jetified-play-services-maps-18.0.2\AndroidManifest.xml:41:13-37
 83
 84        <activity
-84-->[com.google.android.gms:play-services-base:18.0.1] /home/c3dr1c/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+84-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\User\.gradle\caches\transforms-3\3ff720be07735976176520d1c05fb799\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
 85            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-85-->[com.google.android.gms:play-services-base:18.0.1] /home/c3dr1c/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+85-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\User\.gradle\caches\transforms-3\3ff720be07735976176520d1c05fb799\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
 86            android:exported="false"
-86-->[com.google.android.gms:play-services-base:18.0.1] /home/c3dr1c/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+86-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\User\.gradle\caches\transforms-3\3ff720be07735976176520d1c05fb799\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
 87            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-87-->[com.google.android.gms:play-services-base:18.0.1] /home/c3dr1c/.gradle/caches/transforms-3/3ff720be07735976176520d1c05fb799/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+87-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\User\.gradle\caches\transforms-3\3ff720be07735976176520d1c05fb799\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
 88
 89        <meta-data
-89-->[com.google.android.gms:play-services-basement:18.0.0] /home/c3dr1c/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+89-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\User\.gradle\caches\transforms-3\601d4158b382ad9f634d3bbb23a34c83\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
 90            android:name="com.google.android.gms.version"
-90-->[com.google.android.gms:play-services-basement:18.0.0] /home/c3dr1c/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+90-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\User\.gradle\caches\transforms-3\601d4158b382ad9f634d3bbb23a34c83\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
 91            android:value="@integer/google_play_services_version" />
-91-->[com.google.android.gms:play-services-basement:18.0.0] /home/c3dr1c/.gradle/caches/transforms-3/601d4158b382ad9f634d3bbb23a34c83/transformed/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+91-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\User\.gradle\caches\transforms-3\601d4158b382ad9f634d3bbb23a34c83\transformed\jetified-play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
 92    </application>
 93
 94</manifest>
