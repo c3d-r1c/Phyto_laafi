@@ -181,6 +181,7 @@ class DisplayPictureScreen extends StatelessWidget {
             ),
             child: BackButton(color: Colors.white),
           ),
+          
           Positioned(bottom: 0, left: 0, right: 0,
             child: Container(
               padding: EdgeInsets.only(top: 25, left: 30, right: 30),
@@ -223,6 +224,7 @@ class DisplayPictureScreen extends StatelessWidget {
               ),
               )
             ,)
+            
         ],
       ),
       floatingActionButton: SizedBox(
@@ -242,7 +244,8 @@ class DisplayPictureScreen extends StatelessWidget {
               ]
             ),
             child: Center(child: Text("Consulte le Book", style: TextStyle(color: Colors.white, fontSize: 20.0),)),
-          )),
+          )
+        ),
       ),
     );
   }

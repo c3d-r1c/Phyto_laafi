@@ -7,10 +7,13 @@ import 'package:phyto_laafi/views/maps.dart';
 import 'package:phyto_laafi/views/splashscreen.dart';
 import './widgets/splash.dart';
 import './views/page.dart';
+import 'dart:io';
+import 'dart:async';
 
 bool? seenOnboard;
 
 void main() async {
+  HttpOverrides.global = MyHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIOverlays(
       [SystemUiOverlay.bottom, SystemUiOverlay.top]);
@@ -36,5 +39,13 @@ class MyApp extends StatelessWidget {
         child: SplashScreen(),
       ),
     );
+  }
+}
+
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context){
+    return super.createHttpClient(context)
+      ..badCertificateCallback = (X509Certificate cert, string , int port)=> true;
   }
 }

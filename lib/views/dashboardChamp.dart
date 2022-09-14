@@ -8,8 +8,8 @@ import 'dart:convert';
 Future<DataTr> fetchDataTr() async {
   final response =
       // await http.get(Uri.parse('http://127.0.0.1:8000/api/donneestr/2/'));
-      await http.get(Uri.parse('http://10.0.2.2:8000/api/donneestr/2/'));
-      // await http.get(Uri.parse('https://53b7-197-239-76-109.eu.ngrok.io/api/donneestr/2/'),
+      // await http.get(Uri.parse('http://10.0.2.2:8000/api/donneestr/2/'));
+      await http.get(Uri.parse('https://6f94-197-239-76-109.eu.ngrok.io/api/donneestr/2/'));
 
   if (response.statusCode == 200) {
     print(response.body);
