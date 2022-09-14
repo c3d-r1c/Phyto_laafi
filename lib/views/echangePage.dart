@@ -14,6 +14,6 @@ class _EchangePageState extends State<EchangePage> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
-    return  Text("Echange");
+    return  Center(child: Icon(Icons.chrome_reader_mode_outlined, color: Colors.green,size: 150,));
   }
 }

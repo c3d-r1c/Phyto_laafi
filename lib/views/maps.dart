@@ -29,6 +29,7 @@ class _MapsSCreenState extends State<MapsSCreen> {
     return Scaffold(
       body: GoogleMap(
         myLocationButtonEnabled: true,
+        mapType: MapType.normal,
         zoomControlsEnabled: false,
         initialCameraPosition: _initialCameraPosition,
         onMapCreated: ((controller) => _googleMapController = controller),
@@ -39,7 +40,7 @@ class _MapsSCreenState extends State<MapsSCreen> {
         onPressed: (() => _googleMapController.animateCamera(
           CameraUpdate.newCameraPosition(_initialCameraPosition),
         )),
-        child: const Icon(Icons.center_focus_strong)
+        child: const Icon(Icons.center_focus_strong, color: Colors.white,)
 
         ),
     );
