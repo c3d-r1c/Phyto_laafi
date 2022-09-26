@@ -85,7 +85,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                   text: const TextSpan(
                     style: TextStyle(fontSize: 18, color: Colors.black),
                     children: [
-                      TextSpan(text: 'je suis un texte'),
+                      TextSpan(text: 'Avec PhytoLaafi, l\'assurance d\'une production de qualité en quantité.'),
                     ],
                   ),
                 ),
@@ -114,7 +114,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
                           OnboardingNavBtn(
-                            name: 'Skip',
+                            name: 'Passer',
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -129,7 +129,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                             ),
                           ),
                           OnboardingNavBtn(
-                            name: 'Next',
+                            name: 'Suivant',
                             onPressed: () {
                               _pageController.nextPage(
                                 duration: Duration(microseconds: 1000),

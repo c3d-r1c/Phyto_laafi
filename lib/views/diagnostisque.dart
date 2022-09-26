@@ -1,13 +1,15 @@
+import 'dart:ffi';
 import 'dart:io';
 
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
+import 'package:phyto_laafi/config/config.dart';
 import 'dart:io' as io;
 // ignore: depend_on_referenced_packages
 import 'package:http/http.dart' as http;
 import 'dart:convert';
-
+import 'package:path/path.dart';
 
 class Diagnostique extends StatefulWidget {
   const Diagnostique({Key? key}) : super(key: key);
@@ -16,42 +18,40 @@ class Diagnostique extends StatefulWidget {
   State<Diagnostique> createState() => _DiagnostiqueState();
 }
 
-Future<Diagnostic> addDiagnostic(File imgUrl) async {
+Future<Prediction> addDiagnostic(XFile imgUrl) async {
+  var imgUrls = File(imgUrl.path);
   var request = http.MultipartRequest("POST", Uri.parse("https://ba3a-197-239-76-109.eu.ngrok.io/api/awsimage/"));
   request.fields["date"] =  DateTime.now().toString();
-  var pic = await http.MultipartFile.fromPath("image_url", imgUrl.path);
+  var pic = await http.MultipartFile.fromPath("image_url", imgUrls.path);
   request.files.add(pic);
   var response = await request.send();
   var responseData = await response.stream.toBytes();
   var responseString = String.fromCharCodes(responseData);
-  
-
+   
   if (response.statusCode == 201) {
-    var img_id = Diagnostic.fromJson(jsonDecode(responseString)).id;
-    getPrediction(img_id);
-    return Diagnostic.fromJson(jsonDecode(responseString));
+    IDPredict = Diagnostic.fromJson(jsonDecode(responseString)).id;
+    print('Id du diagnostic');
+    print(IDPredict);
+    final response1 = await http.post(  
+      Uri.parse('https://ba3a-197-239-76-109.eu.ngrok.io/api/prediction/'),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+      body: jsonEncode(<String, int>{
+        'img_id': IDPredict,
+      }),
+    );
+
+    if (response1.statusCode == 201) {
+      var pred = Prediction.fromJson(jsonDecode(response1.body)).predicts;
+      print('Id de la prediction');
+      print(IDPredict);
+      return Prediction.fromJson(jsonDecode(response1.body));
+    } else {
+      throw Exception('Echec de prediction..');
+    }
   } else {
     throw Exception('Echec de diagnostique.');
-  }
-}
-
-Future<Prediction> getPrediction(int id) async {
-  final response = await http.post(
-    Uri.parse('https://ba3a-197-239-76-109.eu.ngrok.io/api/prediction/'),
-    headers: <String, String>{
-      'Content-Type': 'application/json; charset=UTF-8',
-    },
-    body: jsonEncode(<String, String>{
-      'img_id': id.toString(),
-    }),
-  );
-
-  if (response.statusCode == 201) {
-    var pred = Prediction.fromJson(jsonDecode(response.body)).predicts;
-    print(pred);
-    return Prediction.fromJson(jsonDecode(response.body));
-  } else {
-    throw Exception('Echec de prediction..');
   }
 }
 
@@ -101,6 +101,7 @@ class _DiagnostiqueState extends State<Diagnostique>
   Future<void>? _initController;
   var isCameraReady = false;
   late XFile imageFile;
+  int? predict;
 
   Widget cameraWidget(context) {
     var camera = _controller.value;
@@ -223,6 +224,8 @@ class _DiagnostiqueState extends State<Diagnostique>
       });
 
       if (mounted) {
+        // Convertir le type XFILE en FILE dabord
+        addDiagnostic(imageFile);
         Navigator.push(
             context,
             MaterialPageRoute(
@@ -234,9 +237,8 @@ class _DiagnostiqueState extends State<Diagnostique>
 
 class DisplayPictureScreen extends StatelessWidget {
   final XFile image;
-  late Future<Diagnostic> futureDiagnostic = addDiagnostic(File(image.path));
-  // int img_id = futureDiagnostic.toString();
-  late Future<Prediction> futurePrediction = getPrediction(148);
+
+  late Future<Prediction> futurePrediction = addDiagnostic(image);
   DisplayPictureScreen({Key? key, required this.image}) : super(key: key);
 
   @override
@@ -306,7 +308,7 @@ class DisplayPictureScreen extends StatelessWidget {
                         SizedBox(height: 15,),                  
                         Row(
                               children: [
-                                Expanded(child: Text("La tomate (Solanum lycopersicum L.) est une espèce de plantes herbacées du genre Solanum de la famille des Solanacées, originaire du Nord-Ouest de l'Amérique du Sud1, largement cultivée pour son fruit. Le terme désigne aussi ce fruit charnu."))
+                                Expanded(child: Text("Degré de prédiction:"+snapshot.data!.degre.toString()+"% La tomate (Solanum lycopersicum L.) est une espèce de plantes herbacées du genre Solanum de la famille des Solanacées, originaire du Nord-Ouest de l'Amérique du Sud1, largement cultivée pour son fruit. Le terme désigne aussi ce fruit charnu."))
                               ],
                             )
                       ],
@@ -319,50 +321,6 @@ class DisplayPictureScreen extends StatelessWidget {
               }
               )
             ,)
-
-          // Positioned(bottom: 0, left: 0, right: 0,
-          //   child: Container(
-          //     padding: EdgeInsets.only(top: 25, left: 30, right: 30),
-          //     height: 250,
-          //     decoration: BoxDecoration(
-          //       color: Colors.white.withOpacity(0.90),
-          //       borderRadius: BorderRadius.only(
-          //         topLeft: Radius.circular(30),
-          //         topRight: Radius.circular(30)
-          //       )
-          //     ),
-          //     child: Column(
-          //       crossAxisAlignment: CrossAxisAlignment.start,
-          //       children: [
-          //         Row(
-          //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //           crossAxisAlignment: CrossAxisAlignment.center,
-          //           children: [
-          //             Column(
-          //               crossAxisAlignment: CrossAxisAlignment.start,
-          //               children: [
-          //                 Text("Nom de la Plante", style: TextStyle(
-          //                   color: Colors.green,
-          //                   fontSize: 22,
-          //                   fontWeight: FontWeight.bold
-          //                   ),
-          //                 ),
-          //               ],
-          //             ),
-                      
-          //           ],
-          //         ),
-          //         SizedBox(height: 15,),                  
-          //         Row(
-          //               children: [
-          //                 Expanded(child: Text("La tomate (Solanum lycopersicum L.) est une espèce de plantes herbacées du genre Solanum de la famille des Solanacées, originaire du Nord-Ouest de l'Amérique du Sud1, largement cultivée pour son fruit. Le terme désigne aussi ce fruit charnu."))
-          //               ],
-          //             )
-          //       ],
-          //     ),
-          //     )
-          //   ,)
-            
         ],
       ),
       floatingActionButton: SizedBox(

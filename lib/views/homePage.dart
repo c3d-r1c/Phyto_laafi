@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:phyto_laafi/views/ajoutChamp.dart';
 import 'package:phyto_laafi/views/detailChamp.dart';
 import 'package:phyto_laafi/views/listChamp.dart';
+import 'package:phyto_laafi/views/dashboardChamp.dart';
 import 'package:phyto_laafi/views/maps.dart';
 
 import 'diagnostisque.dart';
@@ -86,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Row(
                       children: [
-                        Text("Ensoleignement", style: TextStyle(color: Colors.white),),
+                        Text("Ensoleillement", style: TextStyle(color: Colors.white),),
                         Icon(Icons.sunny, size: 25,color: Colors.white,),
                       ],
                     ),
@@ -127,12 +128,12 @@ class _HomePageState extends State<HomePage> {
                                   children: [
                                     Image.asset("assets/images/menu_icon_1.png", width: 120),
                                     const SizedBox(height: 0.0,),
-                                    const Text("Mes Champ"),
+                                    const Text("Mes Champs"),
                                   ],
                                 ),
                               ),
                               onTap: () {
-                                print("mes champ");
+                                print("mes champs");
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=> ListChamp()));
                               },
                             ),
@@ -167,12 +168,12 @@ class _HomePageState extends State<HomePage> {
                                   children: [
                                         Image.asset("assets/images/menu_icon_5.png", width: 100,),
                                         const SizedBox(height: 0.0,),
-                                        Text("Menances")
+                                        Text("Menaces")
                                       ],
                                 ),
                               ),
                               onTap: () {
-                                print("mes champ");
+                                print("mes champs");
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=> MapsSCreen()));
                               },
                             ),
@@ -194,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                               onTap: () {
-                                print("mes champ");
+                                print("mes champs");
                                 Navigator.push(context, MaterialPageRoute(builder: (context)=> Diagnostique()));
                               },
                             )

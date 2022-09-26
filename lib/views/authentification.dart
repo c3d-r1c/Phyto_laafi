@@ -55,7 +55,7 @@ class _AuthentificationState extends State<Authentification> {
               ),
             ),
             const Text(
-              "Un code OPT a été envoyer sur votre \n numéro de téléphone",
+              "Un code OTP a été envoyé sur votre \n numéro de téléphone",
               textAlign: TextAlign.center,
               style: TextStyle(fontWeight: FontWeight.bold),
             ),

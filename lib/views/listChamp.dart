@@ -18,7 +18,7 @@ class _ListChampState extends State<ListChamp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Mes Champ"),
+        title: Text("Mes Champs"),
         centerTitle: true,
       ),
       body: ListView(

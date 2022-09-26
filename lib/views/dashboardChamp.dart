@@ -9,7 +9,7 @@ Future<DataTr> fetchDataTr() async {
   final response =
       // await http.get(Uri.parse('http://127.0.0.1:8000/api/donneestr/2/'));
       // await http.get(Uri.parse('http://10.0.2.2:8000/api/donneestr/2/'));
-      await http.get(Uri.parse('https://b39d-197-239-76-109.eu.ngrok.io/api/donneestr/2/'));
+      await http.get(Uri.parse('https://ba3a-197-239-76-109.eu.ngrok.io/api/donneestr/2/'));
 
   if (response.statusCode == 200) {
     print(response.body);
@@ -149,7 +149,7 @@ class _DashboardChampState extends State<DashboardChamp> {
                                     color: Colors.white,
                                   ),
                                   Text(
-                                    "Humidite",
+                                    "Humidite ambiante",
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold),
@@ -306,77 +306,3 @@ class _DashboardChampState extends State<DashboardChamp> {
     );
   }
 }
-
-
-// child: FutureBuilder<Diagnostic>(
-//   builder: futureDiagnostic,
-//   builder: (context, snapshot) {
-//     if(snapshot.hasData){
-//       return Column(
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: [
-//           Row(
-//             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//             crossAxisAlignment: CrossAxisAlignment.center,
-//             children: [
-//               Column(
-//                 crossAxisAlignment: CrossAxisAlignment.start,
-//                 children: [
-//                   // Text("Id de l'image"+snapshot.data!.rep.toString(), style: TextStyle(
-//                     Text("Id de l'image", style: TextStyle(
-//                     color: Colors.green,
-//                     fontSize: 22,
-//                     fontWeight: FontWeight.bold
-//                     ),
-//                   ),
-//                 ],
-//               ),
-              
-//             ],
-//           ),
-//           SizedBox(height: 15,),                  
-//           Row(
-//                 children: [
-//                   Expanded(child: Text("La tomate (Solanum lycopersicum L.) est une espèce de plantes herbacées du genre Solanum de la famille des Solanacées, originaire du Nord-Ouest de l'Amérique du Sud1, largement cultivée pour son fruit. Le terme désigne aussi ce fruit charnu."))
-//                 ],
-//               )
-//         ],
-//       );
-//     }
-//     return const CircularProgressIndicator();
-//   }
-// )
-
-
-// Future<Diagnostic> addDiagnostic(File imgUrl) async {
-//   var request = http.MultipartRequest("POST", Uri.parse("https://b39d-197-239-76-109.eu.ngrok.io/api/awsimage/"));
-//   request.fields["date"] =  DateTime.now().toString();
-//   var pic = await http.MultipartFile.fromPath("image_url", imgUrl.path);
-//   request.files.add(pic);
-//   var response = await request.send();
-//   var responseData = await response.stream.toBytes();
-//   var responseString = String.fromCharCodes(responseData);
-  
-
-//   if (response.statusCode == 200) {
-//     print(responseString);
-//     // return jsonDecode(responseString);
-//     return Diagnostic.fromJson(jsonDecode(responseString));
-//   } else {
-//     throw Exception('Echec de diagnostique.');
-//   }
-// }
-
-// class Diagnostic {
-//   String rep;
-
-//   Diagnostic({
-//     required this.rep,
-//   });
-
-//   factory Diagnostic.fromJson(Map<String, dynamic> json) {
-//     return Diagnostic(
-//       rep: json["rep"],
-//     );
-//   }
-// }

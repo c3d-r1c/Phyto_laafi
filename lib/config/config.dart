@@ -1,5 +1,8 @@
 import 'package:flutter/painting.dart';
 
+
+  int IDPredict = 0;
+
 class Config {
   static final colors = _Color();
   static final assets = _Assets();
@@ -23,9 +26,9 @@ class OnBoarding {
 
 List<OnBoarding> onboardingContents = [
   OnBoarding(
-      title: 'Lorem ipsum dolor sit amet', image: 'assets/images/img1.png'),
+      title: 'Detection des maladies', image: 'assets/images/img1.png'),
   OnBoarding(
-      title: 'Lorem ipsum dolor sit amet', image: 'assets/images/img2.png'),
+      title: 'Surveillance à distance', image: 'assets/images/img2.png'),
   OnBoarding(
-      title: 'Lorem ipsum dolor sit amet', image: 'assets/images/img3.png'),
+      title: 'Assistance en cas de pathologie', image: 'assets/images/img3.png'),
 ];
